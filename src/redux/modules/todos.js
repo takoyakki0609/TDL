@@ -1,6 +1,12 @@
 // import uuid from "react-uuid";
 import shortid from "shortid";
 
+/* 제성합니다 튜터님
+  리덕스 왜이리 어렵죠
+  이론들어보면 쉽다 해놓고 혼자쓰려니 못쓰겠습니다
+  제발 저를 살려주세요 
+*/
+
 const initialState = [
   {
     id: shortid.generate(),
@@ -33,11 +39,12 @@ const todos = (state = initialState, action) => {
   switch (action.type) {
     case "ADD_TODO":
       const newAdd = action.payload;
-      return [newAdd, ...state]
+      return [...state,newAdd]
       //TODO: 여기 작성
 
     case "DELETE_TODO":
-      return; //TODO: 여기 작성
+      return;
+      //TODO: 여기 작성
 
     case "SWITCH_TODO":
       return; //TODO: 여기 작성
